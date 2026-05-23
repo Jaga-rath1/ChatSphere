@@ -1,0 +1,191 @@
+/* index.css */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 40px;
+    overflow-x: hidden;
+    background: #050505;
+    position: relative;
+}
+
+/* DARK SMOKE ANIMATION */
+
+body::before{
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background:
+        radial-gradient(circle at 20% 20%, #ff004c22, transparent 25%),
+        radial-gradient(circle at 80% 30%, #00f7ff22, transparent 25%),
+        radial-gradient(circle at 50% 80%, #8a2be222, transparent 25%),
+        radial-gradient(circle at 70% 70%, #ff730022, transparent 25%);
+    animation: smokeMove 18s ease-in-out infinite alternate;
+    filter: blur(80px);
+    z-index: -2;
+}
+
+@keyframes smokeMove{
+    0%{
+        transform: translate(0,0) rotate(0deg);
+    }
+
+    100%{
+        transform: translate(-100px, -50px) rotate(8deg);
+    }
+}
+
+/* GRID GLOW EFFECT */
+
+body::after{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -1;
+}
+
+/* TITLE */
+
+h1{
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 60px;
+    color: #ffffff;
+    text-shadow:
+        0 0 10px #ff0055,
+        0 0 20px #ff0055,
+        0 0 40px #ff0055;
+    letter-spacing: 3px;
+}
+
+/* CARD DESIGN */
+
+div{
+    width: 75%;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    box-shadow:
+        0 0 15px rgba(255,0,85,0.3),
+        0 0 40px rgba(0,247,255,0.15);
+    transition: 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* SHINING EFFECT */
+
+div::before{
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -40%;
+    width: 60%;
+    height: 300%;
+    background: rgba(255,255,255,0.08);
+    transform: rotate(25deg);
+    transition: 0.8s;
+}
+
+div:hover::before{
+    left: 120%;
+}
+
+/* CARD HOVER */
+
+div:hover{
+    transform: translateY(-10px) scale(1.02);
+    box-shadow:
+        0 0 25px rgba(255,0,85,0.5),
+        0 0 60px rgba(0,247,255,0.3);
+}
+
+/* TEXT */
+
+h3{
+    color: #08f7fe;
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-shadow: 0 0 8px #08f7fe;
+}
+
+h4{
+    color: #f5d300;
+    font-size: 22px;
+    margin-top: 10px;
+    text-shadow: 0 0 8px #f5d300;
+}
+/* NEW CHAT BUTTON CARD */
+
+form{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+button{
+    padding: 16px 40px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #ff0055, #7b2cff);
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s ease;
+    box-shadow:
+        0 0 15px rgba(255,0,85,0.5),
+        0 0 40px rgba(123,44,255,0.3);
+}
+
+/* Shine Animation */
+
+button::before{
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -40%;
+    width: 60%;
+    height: 300%;
+    background: rgba(255,255,255,0.2);
+    transform: rotate(25deg);
+    transition: 0.8s;
+}
+
+button:hover::before{
+    left: 130%;
+}
+
+/* Hover Effect */
+
+button:hover{
+    transform: scale(1.08);
+    box-shadow:
+        0 0 25px rgba(255,0,85,0.8),
+        0 0 60px rgba(123,44,255,0.5);
+}
+
+/* Click Effect */
+
+button:active{
+    transform: scale(0.96);
+}
