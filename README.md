@@ -37,7 +37,7 @@ A complete bird's-eye view of your active chats inside premium glassmorphic card
 ### ✏️ Edit Message Screen
 Dynamic edit view pulling individual message states securely by Chat ID for precise modifications.
 
-![Edit Message Screen](./Screenshots/editchat.jpg)
+![Edit Message Screen](./Screenshots/editchat.png)
 
 ---
 
