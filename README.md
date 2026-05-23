@@ -30,20 +30,20 @@ ChatSphere is a robust, full-stack chat log management application built using t
 ### 📋 All Chats Dashboard
 A complete bird's-eye view of your active chats inside premium glassmorphic cards with responsive action buttons.
 
-![All Chats Dashboard](./screenshots/all_chats.jpg)
+![All Chats Dashboard](./Screenshots/home.png)
 
 ---
 
 ### ✏️ Edit Message Screen
 Dynamic edit view pulling individual message states securely by Chat ID for precise modifications.
 
-![Edit Message Screen](./screenshots/edit_chat.jpg)
+![Edit Message Screen](./Screenshots/editchat.jpg)
 
 ---
 
 ### ➕ Create New Chat Screen
 Sleek, minimalist interface for creating new logs with vibrant input border-glows.
 
-![Create Chat Screen](./screenshots/create_chat.png)
+![Create Chat Screen](./Screenshots/newChat.png)
 
 ---
